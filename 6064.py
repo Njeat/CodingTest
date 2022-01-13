@@ -1,5 +1,5 @@
 #카잉 달력
-#
+
 
 t = int(input())
 for _ in range(t):
