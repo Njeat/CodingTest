@@ -31,8 +31,6 @@ w = [list(map(int,input().split())) for _ in range(n)]
 d = list(range(n))
 ans = 2147483647
 while True:
-    # if d[0] != 1:       # 이부분은 원래 없던 부분인데 -> 앞서 3, 4, 5라인에서 설명한 것을 수용한 부분
-    #     break
     ok = True           # flag역할
     s = 0               # 경로의 합의 최소값을 저장하는 s
     for i in range(0, n-1):
@@ -46,5 +44,7 @@ while True:
         ans = min(ans, s)
     if not next_permutation(d):     # 최소값을 구해주고 다음경로를 받아오기 위해 다음순열에 대입시켜본다.
         break
+    if d[0] != 0:           # 이부분은 원래 없던 부분인데 -> 앞서 3, 4, 5라인에서 설명한 것을 수용한 부분 
+        break               # d list를 처음 만들때 0으로 시작하는것으로 만들었으니 0이 아닐때로 계산해야한다.
 
 print(ans)
