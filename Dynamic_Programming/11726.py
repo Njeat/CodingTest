@@ -11,4 +11,4 @@ d[1] = 1
 for i in range(2, n+1):
     d[i] = d[i-1] + d[i-2]      # 5번 라인을 코드로 옮긴것.
     d[i] %= 10007
-print(d[i])
+print(d[n])
